@@ -5,7 +5,8 @@ from main.views import login_user
 from main.views import logout_user
 from main.views import edit_mood
 from main.views import delete_mood
-from main.views import add_mood_entry_ajax
+from main.views import add_mood_entry_ajax, create_mood_flutter
+
 
 app_name = 'main'
 
@@ -22,4 +23,5 @@ urlpatterns = [
     path('edit-mood/<uuid:id>', edit_mood, name='edit_mood'),
     path('delete/<uuid:id>', delete_mood, name='delete_mood'), # adjust to the name of the function you created
     path('create-mood-entry-ajax', add_mood_entry_ajax, name='add_mood_entry_ajax'),
+    path('create-flutter/', create_mood_flutter, name='create_mood_flutter'),
 ]
